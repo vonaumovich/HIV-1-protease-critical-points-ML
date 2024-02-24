@@ -1,0 +1,74 @@
+*************************************
+*  ChemoSophia       Computations   *
+*  www.ChemoSophia.com              *
+*  AlteQ quantum chemical           *
+*  orbital-free method              *
+*************************************
+To Cite: 
+1. Potemkin V.A., Grishina M.A. A new paradigm for pattern
+ recognition of drugs. J. Comput. Aided Mol. Des., 2008, 
+V. 22, P. 489 - 505.
+2. Maria A. Grishina, Vladimir A. Potemkin. Topological
+ Analysis of Electron Density in Large Biomolecular
+ Systems. Current Drug Discovery Technologies. 
+ 2019. V 16. N 4. P. 437-448. 
+3. Rimac H., Grishina M.A., Potemkin V.A. Electron
+ density analysis of CDK complexes using the AlteQ 
+method. Future Med. Chem. 2020. V 12. N 15. P. 1387-1397.
+
+ChemoSophia computational options:
+ 3D map of electronic density of monomolecular system
+ OUTER SHELLS
+ for s-elements ns    electron shell
+ for p-elements ns np electron shells
+ for d-elements ns    electron shells
+ for f-elements ns    electron shells
+
+
+3D Map of electronic density at the critical points
+Designations:
+ X, Y, Z - point coordinates
+ ROL - electron density of ligand, e/Angstrom^3
+ ROE - electron density of enzyme, e/Angstrom^3
+ LOG_ROLROE = LOG(ROL*ROE)
+ RL - distance between the point and the most contributing ligand atom
+ RE - distance between the point and the most contributing enzyme atom
+ SUMRLRE = RL+RE
+ RLRE = RL*RE
+ LOG_ROCNTL_ROCNTE_NL_NE = LOG(ROCNTL*ROCNTE/(NL*NE))
+ ROCNTL - electron density at the center of the ligand atom
+ ROCNTE - electron density at the center of the enzyme atom
+ ROINL - ligand electron density donated by the inner  shells to the point
+ ROINE - enzyme electron density donated by the inner  shells to the point
+ NL - atomic number of the ligand atom
+ NE - atomic number of the enzyme atom
+ NLOUT - the number of the electrons of the outer shell of the ligand atom
+ NEOUT - the number of the electrons of the outer shell of the enzyme atom
+ COMPLEMENTARITY FACTORS:
+ CF1 = LOG((ROE+ROINE)*ROCNTE/NE)+ LOG(ROL*ROCNTL/NL)
+ CF2 = LOG(ROE*ROCNTE/NEOUT)+ LOG(ROL*ROCNTL/NLOUT)
+ CF3 = LOG(ROE*ROCNTE/NEOUT**2)+ LOG(ROL*ROCNTL/NLOUT**2)
+ CF4 = LOG(ROE*ROCNTE/NEOUT**2)+ LOG(ROL*ROCNTL/NLOUT**2)+ROINL+ROINE
+ CORRELATION: 
+ CF =a1+b1*SUMRLRE
+ CF =a2+b2*RLRE
+
+ THE SOFTWARE WAS DESIGNED BY DR. MARIA GRISHINA
+ AND DR. VLADIMIR POTEMKIN
+ MANY THANKS TO DR. HRVOJE RIMAC FOR THE TREMENDOUS
+ WORK ON TESTING THE PROGRAM ON VARIOUS COMPLEXES,  AS
+ WELL AS FOR THE GREAT IDEAS FOR IMPROVING THE SOFTWARE
+*************************************************************
+
+End of the Input
+
+Start ChemoSophia Computations
+TYPEOFCRITPOINT          X       Y       Z                   ROL                   ROE            LOG_ROLROE                    RL                    RE               SUMRLRE                  RLRE                ROCNTL               ROCNTE LOG_ROCNTL_ROCNTE_NL_NE               ROINL                 ROINE     NL      NE                     CF1                     CF2                     CF3                     CF4                   ROL_L                   ROE_E NUMBL NUMBE            XL            YL            ZL            XE            YE            ZE  NAME_OF_LIG_ATOM     NAME_OF_ENZ_ATOM
+(3,-1)                8.29   13.28   14.94             0.0101847             0.0114065            -9.0604476             1.6696051             1.3637164             3.0333215             2.2768679            17.7828000             3.3395588             2.1381603             0.0000000             0.0000000      7      1              -6.9222874              -6.5858151              -8.1952530              -8.1952530               0.0000000               0.0024192     1   468     7.2120000    14.4990000    14.5710000     9.2460000    12.3910000    15.3370000     1  N1  LIG A    468  H   ASP A  30
+(3,-1)                6.54   13.53   14.16             0.0663509             0.0597074            -5.5310964             1.2504594             1.2430588             2.4935183             1.5543946            17.7828000            31.6906127             2.3089005             0.0000000             0.0000000      7      8              -3.2221959              -2.5980416              -5.9992389              -5.9992389               0.0000000               0.0037227     1   478     7.2120000    14.4990000    14.5710000     5.8330000    12.5910000    13.7500000     1  N1  LIG A    478  OD2 ASP A  30
+Calculation of electron density map is 
+completed
+
+Single Point Computations Terminated Normally
+************************************************************
+
